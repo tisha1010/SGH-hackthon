@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Availability Monitor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 40px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f8f9fa;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007bff;
+        }
+        img {
+            width: 100%;
+            max-width: 400px;
+        }
+        .rate {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📶 Network Availability Monitor</h1>
+        <p>Current Availability Rate</p>
+        <img src="{{ url_for('static', filename='availability_rate.png') }}" alt="Network Availability Gauge">
+        <p class="rate">📊 Availability: {{ availability_rate }}%</p>
+    </div>
+</body>
+</html>

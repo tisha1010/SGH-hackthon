@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>python app.py
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Network Monitoring Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        img { width: 80%; max-width: 800px; margin-top: 20px; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <h1>AI Network Monitoring Dashboard</h1>
+    <h2>Heatmap Analysis</h2>
+    <img src="{{ url_for('heatmap') }}" alt="Heatmap">
+    <p>Last Updated: <span id="timestamp"></span></p>
+
+    <script>
+        function updateTimestamp() {
+            document.getElementById("timestamp").innerText = new Date().toLocaleString();
+        }
+        updateTimestamp();
+    </script>
+</body>
+</html>
